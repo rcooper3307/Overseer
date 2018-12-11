@@ -1,12 +1,12 @@
-package Rooms;
+package TheMedium;
 
-import People.Person;
+import Beings.Being;
 
-public class Room {
-	Person occupant;
+public class TheMedium {
+	Being occupant;
 	int xLoc,yLoc;
 	
-	public Room(int x, int y)
+	public TheMedium(int x, int y)
 	{
 		xLoc = x;
 		yLoc = y;
@@ -14,9 +14,9 @@ public class Room {
 
 	/**
 	 * Method controls the results when a person enters this room.
-	 * @param x the Person entering
+	 * @param x the Being entering
 	 */
-	public void enterRoom(Person x)
+	public void enterRoom(Being x)
 	{
 		System.out.println("You enter a plain old room");
 		occupant = x;
@@ -28,7 +28,7 @@ public class Room {
 	 * Removes the player from the room.
 	 * @param x
 	 */
-	public void leaveRoom(Person x)
+	public void leaveRoom(Being x)
 	{
 		occupant = null;
 	}

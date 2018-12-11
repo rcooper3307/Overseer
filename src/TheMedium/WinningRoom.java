@@ -1,7 +1,7 @@
-package Rooms;
+package TheMedium;
 
-import Game.Runner;
-import People.Person;
+import Beings.Being;
+import Overseer.Runner;
 
 public class WinningRoom extends Room
 {
@@ -13,10 +13,10 @@ public class WinningRoom extends Room
 
 	/**
 	 * Triggers the game ending conditions.
-	 * @param x the Person entering
+	 * @param x the Being entering
 	 */
 	@Override
-	public void enterRoom(Person x) {
+	public void enterRoom(Being x) {
 
 		occupant = x;
 		x.setxLoc(this.xLoc);
