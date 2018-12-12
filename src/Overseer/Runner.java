@@ -15,6 +15,7 @@ public class Runner {
 	public static void main(String[] args)
 	{
 		TheMedium[][] building = new TheMedium[5][5];
+
 		
 		//Fill the building with normal rooms
 		for (int x = 0; x<building.length; x++)

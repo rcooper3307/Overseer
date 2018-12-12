@@ -6,7 +6,7 @@ import Overseer.Runner;
 public class TheMedium {
 	Being occupant;
 	int xLoc,yLoc;
-	
+
 	public TheMedium(int x, int y)
 	{
 		xLoc = x;
