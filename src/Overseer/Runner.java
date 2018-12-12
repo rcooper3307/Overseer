@@ -3,7 +3,7 @@ package Overseer;
 import Beings.Being;
 import TheMedium.TheMedium;
 import TheMedium.Dungeon;
-import TheMedium.Villages;
+import TheMedium.Village;
 	
 import java.util.Scanner;
 
@@ -14,7 +14,7 @@ public class Runner {
 	
 	public static void main(String[] args)
 	{
-		TheMedium[][] building = new TheMedium[][][5][5];
+		TheMedium[][] building = new TheMedium[5][5];
 		
 		//Fill the building with normal rooms
 		for (int x = 0; x<building.length; x++)
@@ -26,13 +26,14 @@ public class Runner {
 		}
 
 
-		//Create random dungeons and Villages
+		//Create random Dungeons and Villages
 		int x = (int)(Math.random()*building.length);
 		int y = (int)(Math.random()*building.length);
 		building[x][y] = new Dungeon(x, y);
 		building[x][y] = new Dungeon(x, y);
 		building[x][y] = new Dungeon(x, y);
 		building[x][y] = new Dungeon(x, y);
+		building[x][y] = new Village(x, y);
 
 		 
 		 //Setup player 1 and the input scanner
