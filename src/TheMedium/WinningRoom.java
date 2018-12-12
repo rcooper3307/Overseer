@@ -3,7 +3,7 @@ package TheMedium;
 import Beings.Being;
 import Overseer.Runner;
 
-public class WinningRoom extends Room
+public class WinningRoom extends TheMedium
 {
 
 	public WinningRoom(int x, int y) {

@@ -2,7 +2,8 @@ package Overseer;
 
 import Beings.Being;
 import TheMedium.TheMedium;
-import TheMedium.WinningRoom;
+import TheMedium.Dungeon;
+import TheMedium.Villages;
 	
 import java.util.Scanner;
 
@@ -25,13 +26,17 @@ public class Runner {
 		}
 
 
-		//Create a random winning room.
+		//Create random dungeons and Villages
 		int x = (int)(Math.random()*building.length);
 		int y = (int)(Math.random()*building.length);
-		building[x][y] = new WinningRoom(x, y);
+		building[x][y] = new Dungeon(x, y);
+		building[x][y] = new Dungeon(x, y);
+		building[x][y] = new Dungeon(x, y);
+		building[x][y] = new Dungeon(x, y);
+
 		 
 		 //Setup player 1 and the input scanner
-		Being player1 = new Being("FirstName", "FamilyName", 0,0);
+		Being player1 = new Being("Persona", 0, 0,0,0,100);
 		building[0][0].enterRoom(player1);
 		Scanner in = new Scanner(System.in);
 		while(gameOn)

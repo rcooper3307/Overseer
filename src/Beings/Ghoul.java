@@ -1,5 +1,5 @@
 package Beings;
 
-public class Ghoul {
+public class Ghoul extends Being {
 
 }

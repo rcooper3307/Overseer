@@ -1,5 +1,5 @@
 package Beings;
 
-public class Imp {
+public class Imp extends Being {
 
 }

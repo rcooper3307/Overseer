@@ -1,4 +1,5 @@
 package Beings;
 
-public class Ogre {
+public class Ogre extends Being {
+
 }

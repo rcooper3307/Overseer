@@ -1,6 +1,7 @@
 package TheMedium;
 
 import Beings.Being;
+import Overseer.Runner;
 
 public class TheMedium {
 	Being occupant;
