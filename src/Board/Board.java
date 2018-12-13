@@ -2,16 +2,31 @@ package Board;
 
 import TheMedium.TheMedium;
 
-public abstract class Board
+public class Board
 {
-    private TheMedium[][] map;
-    public Board (int length, int width)
+    private String[][] map;
+    public Board(String[][] map)
     {
-        map = new TheMedium[length][width];
+        this.map = map;
+    }
+    void edit(String replace, int row, int column)
+    {
+        map[row][column] = replace;
+    }
+
+    void fill(String str)
+    {
+        for(int x = 0; x < map.length; x++)
+        {
+            for(int y = 0; y < map[x].length; y++)
+            {
+                map[x][y] = str;
+            }
+        }
     }
     public String toString()
     {
-        String Board = " ";
+        String Board = "";
         for(int i = 0; i < map.length; i++)
         {
             for(int j = 0; j < map[i].length; j++)

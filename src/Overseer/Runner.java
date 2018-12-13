@@ -22,7 +22,7 @@ public class Runner {
 		TheMedium[][] building = new TheMedium[5][5];
 		
 		//Fill the map with Villages
-		for (int x = 0; x<building.length; x++)
+		for (int x = 0; x < building.length; x++)
 		{
 			for (int y = 0; y < building[x].length; y++)
 			{
@@ -42,7 +42,7 @@ public class Runner {
 
 
         //Setup player 1 and the input scanner
-		Being player1 = new Being("Persona", 100,0,0);
+		Being player1 = new Being("Persona",0,0);
 		building[0][0].enterRoom(player1);
 		Scanner in = new Scanner(System.in);
         Random rand = new Random();
@@ -60,6 +60,7 @@ public class Runner {
 			if(validMove(move, player1, building))
 			{
 				System.out.println("Your coordinates: row = " + player1.getxLoc() + " col = " + player1.getyLoc());
+				if( (player1.getxLoc() !=4 && player1.getyLoc() !=4)())
 				
 			}
 			else {
