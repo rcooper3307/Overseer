@@ -13,8 +13,7 @@ public class Village extends TheMedium
      * Method controls the Being entering the Village
      * @param x the Person entering
      */
-    public void enterRoom(Being x)
-    {
+    public void enterRoom(Being x) {
         isOccupied = true;
         System.out.println("You enter a village whose occupants are desperately looking for a solution to the occupied dungeons in the nearby area.");
         System.out.println("They...hire you instantaneously. Without even the slightest bit of hesitation. And they seem very eager to reward you for accepting.");
@@ -24,16 +23,6 @@ public class Village extends TheMedium
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
     }
-    public static String itemChoose(String item)
-    {
-        item= item.toLowerCase().trim();
-        if (item = "armoure")
-        {
-            //attack counter goes up
-
-        }
-
-        }
 
     /**
      * Removes the player from the room.

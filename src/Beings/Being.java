@@ -2,13 +2,12 @@ package Beings;
 
 public class Being {
     String Title;
-    int healthVial;
     int xLoc, yLoc;
 
-    public Being (String title, int healthVial, int xLoc, int yLoc)
+    public Being (String title, int xLoc, int yLoc)
     {
         this.Title = title;
-        this.healthVial = healthVial;
+
         this.xLoc = xLoc;
         this.yLoc = yLoc;
     }

@@ -4,10 +4,12 @@ import Beings.Being;
 import Beings.Ghoul;
 import Beings.Ogre;
 import Beings.Imp;
+import Board.Board;
 import TheMedium.TheMedium;
 import TheMedium.Dungeon;
 import TheMedium.Village;
-	
+
+import java.util.Random;
 import java.util.Scanner;
 
 public class Runner {
@@ -18,14 +20,13 @@ public class Runner {
 	public static void main(String[] args)
 	{
 		TheMedium[][] building = new TheMedium[5][5];
-
 		
 		//Fill the map with Villages
 		for (int x = 0; x<building.length; x++)
 		{
 			for (int y = 0; y < building[x].length; y++)
 			{
-				building[x][y] = new TheMedium(x,y);
+				building[x][y] = new Village(x,y);
 			}
 		}
 
@@ -40,19 +41,20 @@ public class Runner {
 		building[4][4] = new Dungeon(4, 4);
 
 
-
-
         //Setup player 1 and the input scanner
 		Being player1 = new Being("Persona", 100,0,0);
 		building[0][0].enterRoom(player1);
 		Scanner in = new Scanner(System.in);
+        Random rand = new Random();
+
 		//Setup enemies
-        Being ghoul1 = new Ghoul("Ghoul",100,4,4);
-        Being ogre = new Ogre("Ogre",200,4,2);
-        Being imp = new Imp("Ghoul",50,1,3);
-        Being ghoul2 = new Being("Ghoul",100,4,4);
+        Being ghoul1 = new Ghoul("Ghoul",4,4);
+        Being ogre = new Ogre("Ogre",4,2);
+        Being imp = new Imp("Ghoul",2,2);
+        Being ghoul2 = new Ghoul("Ghoul",1,3);
 		while(gameOn)
 		{
+            System.out.print(building);
 			System.out.println("Where would you like to move? (Choose N, S, E, W)");
 			String move = in.nextLine();
 			if(validMove(move, player1, building))
