@@ -1,16 +1,17 @@
 package TheMedium;
 
 import Beings.Being;
-import Overseer.Runner;
 
 public class TheMedium {
 	Being occupant;
 	int xLoc,yLoc;
+	public boolean isOccupied;
 
 	public TheMedium(int x, int y)
 	{
 		xLoc = x;
 		yLoc = y;
+		this.isOccupied = false;
 	}
 
 	/**
@@ -19,10 +20,23 @@ public class TheMedium {
 	 */
 	public void enterRoom(Being x)
 	{
-		System.out.println("You enter a plain old room");
+
+		System.out.println("You have just entered THE MEDIUM.");
 		occupant = x;
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
+	}
+	 public void isOccupied()
+	{
+		if (isOccupied = true)
+		{
+			System.out.print("X");
+		}
+		else if (isOccupied = false)
+		{
+			System.out.print("+");
+		}
+
 	}
 
 	/**
@@ -31,6 +45,7 @@ public class TheMedium {
 	 */
 	public void leaveRoom(Being x)
 	{
+		isOccupied = false;
 		occupant = null;
 	}
 	

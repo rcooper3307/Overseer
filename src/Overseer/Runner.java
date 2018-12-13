@@ -1,6 +1,9 @@
 package Overseer;
 
 import Beings.Being;
+import Beings.Ghoul;
+import Beings.Ogre;
+import Beings.Imp;
 import TheMedium.TheMedium;
 import TheMedium.Dungeon;
 import TheMedium.Village;
@@ -17,7 +20,7 @@ public class Runner {
 		TheMedium[][] building = new TheMedium[5][5];
 
 		
-		//Fill the building with normal rooms
+		//Fill the map with Villages
 		for (int x = 0; x<building.length; x++)
 		{
 			for (int y = 0; y < building[x].length; y++)
@@ -27,20 +30,27 @@ public class Runner {
 		}
 
 
-		//Create random Dungeons and Villages
+		//Create the spawn room and Dungeons
 		int x = (int)(Math.random()*building.length);
 		int y = (int)(Math.random()*building.length);
-		building[x][y] = new Dungeon(x, y);
-		building[x][y] = new Dungeon(x, y);
-		building[x][y] = new Dungeon(x, y);
-		building[x][y] = new Dungeon(x, y);
-		building[x][y] = new Village(x, y);
+		building[0][0] = new TheMedium(0, 0);
+		building[4][2] = new Dungeon(4, 2);
+		building[1][3] = new Dungeon(1, 3);
+		building[2][2] = new Dungeon(2, 2);
+		building[4][4] = new Dungeon(4, 4);
 
-		 
-		 //Setup player 1 and the input scanner
-		Being player1 = new Being("Persona", 0, 0,0,0,100);
+
+
+
+        //Setup player 1 and the input scanner
+		Being player1 = new Being("Persona", 100,0,0);
 		building[0][0].enterRoom(player1);
 		Scanner in = new Scanner(System.in);
+		//Setup enemies
+        Being ghoul1 = new Ghoul("Ghoul",100,4,4);
+        Being ogre = new Ogre("Ogre",200,4,2);
+        Being imp = new Imp("Ghoul",50,1,3);
+        Being ghoul2 = new Being("Ghoul",100,4,4);
 		while(gameOn)
 		{
 			System.out.println("Where would you like to move? (Choose N, S, E, W)");

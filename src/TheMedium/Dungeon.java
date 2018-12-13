@@ -7,7 +7,7 @@ public class Dungeon extends TheMedium
 {
     public Dungeon(int x, int y)
     {
-        super(x, y);
+        super(x, y, false);
     }
 
     /**
